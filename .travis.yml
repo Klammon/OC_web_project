@@ -1,6 +1,9 @@
 language: java
-script:	mvn verify
 
+script:
+  - mvn -B -T2 -fae -Djava.awt.headless=true -Dall clean install
+  - mvn verify
+  
 jdk:
   - oraclejdk8
   
